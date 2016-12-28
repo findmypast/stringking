@@ -24,16 +24,24 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
 ## API
 ```
-String.between(string, prefix, postfix)
-
-String.cameled(string)
-String.slugged(string)
-String.humaned(string)
-String.snaked(string)
 
 String.is_empty?(string)
 String.is_upper?(string)
 String.is_lower?(string)
+
+String.between(string, prefix, postfix)
+
+String.is_pascal_case
+String.is_camel_case
+String.is_hyphen_case
+String.is_snake_case
+String.is_human_case
+
+String.pascal_case(string)
+String.camel_case(string)
+String.hyphen_case(string)
+String.snake_case(string)
+String.human_case(string)
 
 String.to_boolean?(string)
 String.collapse_whitespace(string)
