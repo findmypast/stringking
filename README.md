@@ -23,7 +23,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     ```
 
 ## API
-
+```
 String.between(string, prefix, postfix)
 
 String.cameled(string)
@@ -31,8 +31,6 @@ String.slugged(string)
 String.humaned(string)
 String.snaked(string)
 
-String.is_alphabetic?(string)
-String.is_numeric?(string)
 String.is_empty?(string)
 String.is_upper?(string)
 String.is_lower?(string)
@@ -40,3 +38,4 @@ String.is_lower?(string)
 String.to_boolean?(string)
 String.collapse_whitespace(string)
 String.count_occurences(string, substring)
+```
