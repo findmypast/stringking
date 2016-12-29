@@ -38,6 +38,7 @@ defmodule StringkingTest do
     assert Sut.is_pascal_case?("helloWorld") == false
     assert Sut.is_pascal_case?("hello-world") == false
     assert Sut.is_pascal_case?("hello_world") == false
+    assert Sut.is_pascal_case?("HelloWorld55") == true
   end
 
   test "is_camel_case works with various test strings" do
@@ -46,6 +47,7 @@ defmodule StringkingTest do
     assert Sut.is_camel_case?("helloWorld") == true
     assert Sut.is_camel_case?("hello-world") == false
     assert Sut.is_camel_case?("hello_world") == false
+    assert Sut.is_camel_case?("helloWorld55") == true
   end
 
   test "is_hyphen_case works with various test strings" do
@@ -54,6 +56,7 @@ defmodule StringkingTest do
     assert Sut.is_hyphen_case?("helloWorld") == false
     assert Sut.is_hyphen_case?("hello-world") == true
     assert Sut.is_hyphen_case?("hello_world") == false
+    assert Sut.is_hyphen_case?("hello-world55") == true
   end
 
   test "is_snake_case works with various test strings" do
@@ -62,6 +65,7 @@ defmodule StringkingTest do
     assert Sut.is_snake_case?("helloWorld") == false
     assert Sut.is_snake_case?("hello-world") == false
     assert Sut.is_snake_case?("hello_world") == true
+    assert Sut.is_snake_case?("hello_world55") == true
   end
 
   test "is_human_case works with various test strings" do
@@ -70,5 +74,6 @@ defmodule StringkingTest do
     assert Sut.is_human_case?("helloWorld") == false
     assert Sut.is_human_case?("hello-world") == false
     assert Sut.is_human_case?("hello_world") == false
+    assert Sut.is_human_case?("Hello World 55") == true
   end
 end

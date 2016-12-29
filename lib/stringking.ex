@@ -30,14 +30,14 @@ defmodule Stringking do
   end
 
   def is_hyphen_case?(string) do
-    String.match?(string, ~r/^[a-z]+(-[a-z]+)*$/)
+    String.match?(string, ~r/^[a-z]+(-[a-z0-9]+)*$/)
   end
 
   def is_snake_case?(string) do
-    String.match?(string, ~r/^[a-z]+(_[a-z]+)*$/)
+    String.match?(string, ~r/^[a-z]+(_[a-z0-9]+)*$/)
   end
 
   def is_human_case?(string) do
-    String.match?(string, ~r/^[A-Z]([a-z]|[A-Z]|\s)+$/)
+    String.match?(string, ~r/^[A-Z]([a-z]|[A-Z]|\s|[0-9])+$/)
   end
 end
